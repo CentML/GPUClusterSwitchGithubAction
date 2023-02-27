@@ -19,7 +19,14 @@ async function start() {
 }
 
 async function stop() {
-  await aws.terminateEc2Instance();
+  const ec2InstanceIds = [];
+
+  if (config.input.t4) {
+    const t4Ids = config.getT4Ids();
+    ec2InstanceIds.concat(t4Ids);
+  }
+
+  await aws.stopEc2Instance(ec2InstanceIds);
 }
 
 (async function () {
