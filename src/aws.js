@@ -10,10 +10,9 @@ async function startEc2Instance(ec2InstanceIds) {
   };
 
   try {
-    const result = await ec2.startInstances(params).promise();
-    const ec2InstanceId = result.StartingInstances.InstanceIds;
-    core.info(`AWS EC2 instances ${ec2InstanceId} are started`);
-    return ec2InstanceId;
+    await ec2.startInstances(params).promise();
+    core.info(`AWS EC2 instances ${ec2InstanceIds} are started`);
+    return ec2InstanceIds;
   } catch (error) {
     core.error('AWS EC2 instance starting error');
     throw error;
