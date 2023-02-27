@@ -7,10 +7,10 @@ function setOutput(ec2InstanceIds) {
 }
 
 async function start() {
-  const ec2InstanceIds = [];
+  let ec2InstanceIds = [];
   if (config.input.t4) {
     const t4Ids = config.getT4Ids();
-    ec2InstanceIds.concat(t4Ids);
+    ec2InstanceIds = ec2InstanceIds.concat(t4Ids);
     console.log(t4Ids);
     console.log(ec2InstanceIds);
   }
@@ -20,11 +20,11 @@ async function start() {
 }
 
 async function stop() {
-  const ec2InstanceIds = [];
+  let ec2InstanceIds = [];
 
   if (config.input.t4) {
     const t4Ids = config.getT4Ids();
-    ec2InstanceIds.concat(t4Ids);
+    ec2InstanceIds = ec2InstanceIds.concat(t4Ids);
   }
 
   await aws.stopEc2Instance(ec2InstanceIds);
