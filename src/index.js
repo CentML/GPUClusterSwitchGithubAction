@@ -11,8 +11,9 @@ async function start() {
   if (config.input.t4) {
     const t4Ids = config.getT4Ids();
     ec2InstanceIds.concat(t4Ids);
+    console.log(t4Ids);
+    console.log(ec2InstanceIds);
   }
-
   const startedEC2InstanceIds = await aws.startEc2Instance(ec2InstanceIds);
   setOutput(startedEC2InstanceIds);
   await aws.waitForInstanceRunning(startedEC2InstanceIds);
