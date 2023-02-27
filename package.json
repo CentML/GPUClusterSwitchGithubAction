@@ -1,15 +1,15 @@
 {
-  "name": "ec2-github-runner",
-  "description": "GitHub Action for automatic creation and registration AWS EC2 instance as a GitHub Actions self-hosted runner.",
-  "author": "Volodymyr Machula",
+  "name": "gpu-cluster-switch-github-action",
+  "description": "GitHub Action for automatic starting and stopping AWS EC2 instance as a GitHub Actions self-hosted runner.",
+  "author": "Saksham Saini",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:machulav/ec2-github-runner.git"
+    "url": "git@github.com:CentML/GPUClusterSwitchGithubAction.git"
   },
-  "homepage": "https://github.com/machulav/ec2-github-runner#readme",
+  "homepage": "https://github.com/CentML/GPUClusterSwitchGithubAction/#readme",
   "bugs": {
-    "url": "https://github.com/machulav/ec2-github-runner/issues"
+    "url": "https://github.com/CentML/GPUClusterSwitchGithubAction/issues"
   },
   "scripts": {
     "index": "node -r dotenv/config ./src/index.js",
