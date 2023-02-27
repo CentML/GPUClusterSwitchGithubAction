@@ -8,6 +8,8 @@ class Config {
       mode: core.getInput('mode'),
       githubToken: core.getInput('github-token'),
       t4: core.getInput('t4'),
+      a10g: core.getInput('a10g'),
+      v100: core.getInput('v100'),
     };
 
     // the values of github.context.repo.owner and github.context.repo.repo are taken from
@@ -37,6 +39,14 @@ class Config {
 
   getT4Ids() {
     return ec2Config.t4;
+  }
+
+  getA10GIds() {
+    return ec2Config.a10g;
+  }
+
+  getV100Ids() {
+    return ec2Config.v100;
   }
 
   generateUniqueLabel() {
