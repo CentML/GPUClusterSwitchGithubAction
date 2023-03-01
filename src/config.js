@@ -35,6 +35,18 @@ class Config {
     if (!this.input.t4) {
       throw new Error(`The 't4' input is not specified`);
     }
+
+    if (!this.input.a10g) {
+      throw new Error(`The 'a10g' input is not specified`);
+    }
+
+    if (!this.input.v100) {
+      throw new Error(`The 'v100' input is not specified`);
+    }
+  }
+
+  getInput() {
+    return this.input;
   }
 
   getT4Ids() {
