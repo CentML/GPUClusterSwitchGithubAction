@@ -8,6 +8,7 @@ function setOutput(ec2InstanceIds) {
 
 async function start() {
   let ec2InstanceIds = [];
+  console.log(config.getInput());
   if (config.getInput().t4 === 'true') {
     const t4 = config.getT4Ids();
     ec2InstanceIds = ec2InstanceIds.concat(t4);
