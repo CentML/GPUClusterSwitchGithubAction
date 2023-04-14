@@ -9,10 +9,6 @@ See [below](#example) the YAML code of the depicted workflow.
 
 **Table of Contents**
 
-- [Use cases](#use-cases)
-  - [Access private resources in your VPC](#access-private-resources-in-your-vpc)
-  - [Customize hardware configuration](#customize-hardware-configuration)
-  - [Save costs](#save-costs)
 - [Usage](#usage)
   - [How to start](#how-to-start)
   - [Inputs](#inputs)
