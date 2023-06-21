@@ -22,7 +22,7 @@ async function start() {
     ec2InstanceIds = ec2InstanceIds.concat(v100);
   }
 
-  const startedEC2InstanceIds = await aws.startEc2Instance(ec2InstanceIds);
+  const startedEC2InstanceIds = await aws.startEc2Instance(ec2InstanceIds).catch(console.error);
   setOutput(startedEC2InstanceIds);
   await aws.waitForInstanceRunning(startedEC2InstanceIds);
 }
